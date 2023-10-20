@@ -1,0 +1,8 @@
+codesign --entitlements /Applications/dev/cplusplus/memory-management/gdb-entitlement.xml -fs gdb-cert $(which gdb)
+
+
+# Check for leaks 
+valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --log-file=/home/workspace/valgrind-out.txt /home/workspace/a.out
+
+
+
